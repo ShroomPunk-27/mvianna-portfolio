@@ -89,12 +89,14 @@
         </div>
     </div>
     <br>
-    <p>Hey, thanks for reaching out! I'll get in touch with you using the address provided below as soon as possible. Make sure to check my commission info and read my Terms of Service, be as detailed as you want in your request! While you wait ever so patiently for my reply, feel free to browse my <a href="../gallery/index.html">Gallery</a> for more examples of my work.</p>
+    <p>Hey, thanks for reaching out! I'll get in touch with you using the address provided below as soon as possible.
+        Make sure to check my commission info and read my Terms of Service, be as detailed as you want in your request!
+        While you wait ever so patiently for my reply, feel free to browse my <a href="../gallery/index.html">Gallery</a> for more examples of my work.</p>
     <br>
     <div class="form_container">
     <div class="contact_form">
         <h2>~ Contract ~</h2>
-        <form onsubmit="alert('Your message has been sent! I will get back to you as soon as possible.');">
+        <form action="menudesplegable.php" method="post" onsubmit="alert('Your message has been sent! I will get back to you as soon as possible.');">
             <div class="form-group">
                 <p>
                     <label for="name"><strong>X</strong></label>
@@ -146,6 +148,16 @@
                     <br>
                     (If you selected "Other", please specify in the description)
                 </p>
+                <div>
+                    <p><b>III. </b>What tale do you wish to tell?
+                        <select>
+                            <option value="0" disabled selected>| Commission Type |</option>
+                            <!-- Acá van las opciones del menú desplegable de la base de datos -->
+                        </select>
+                        <br>
+                        (If you selected "Other", please specify in the description)
+                    </p>
+                </div>
             </div>
             <div class="form-group">
                 <p>
@@ -209,4 +221,5 @@
         });
     </script>
 </body>
+
 </html>
