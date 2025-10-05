@@ -17,8 +17,7 @@
     h3 {
         color: #2e2b22;
         font-family: 'IM FELL English', serif;
-        margin-left: 200px;
-        font-size: 30px;
+        font-size: 1.56em;
     }
     p {
         color: #ffffff;
@@ -147,9 +146,9 @@
         display: block;
         background: #ffffff2e;
         height: fit-content;
-        min-height: 600px;
+        max-width: 960px;
         justify-content: center;
-        margin: 50px;
+        margin: 50px auto;
         padding: 1.25em;
     }
 
@@ -212,6 +211,12 @@
         color: white;
         text-shadow: #000000e1 0px 0px 15px;
         list-style: circle;
+    }
+
+    @media (max-width: 760px) {
+        .home_container {
+            font-size: 0.60em;
+        }
     }
 
     /*------------------------*/
@@ -361,15 +366,23 @@
         background: url('../imgs/misc/abrasive-beige-surface.jpg') no-repeat center center, #d2b596c6;
         background-size: cover, cover;
         background-blend-mode: soft-light;
-        border: 15px solid #6d442a;
+        border: 15px solid #2f2719;
         border-radius: 15px;
         padding: 1.25rem;
         box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
         justify-content: flex-start;
         gap: 40px;
-        margin: 20px;
-        min-height: 800px;
+        margin: 0 auto;
+        min-height: 700px;
         height: fit-content;
+        width: 90%;
+        max-width: 950px;
+    }
+
+    @media (max-width: 700px) {
+        .commission_board {
+            min-height: 300px;
+        }
     }
 
     .commission_board h2 {
@@ -438,13 +451,15 @@
         display: flex;
         justify-content: center;
         text-align: left;
+        font-size: 1rem;
         color: #333;
         margin: 0;
         padding: 0;
     }
 
     .will_wont h3 {
-        text-align: left;
+        text-align: center;
+        font-size: 1.2rem;
         justify-content: left;
         color: #333;
         margin: 0px;
@@ -497,6 +512,7 @@
     .contact_form h3 {
         color: #b11c23;
         text-align: center;
+        margin: 0 auto;
     }
     
     .contact_form .form-group {
@@ -530,7 +546,7 @@
         background: none;
         font-family: 'Zapfino', serif;
         font-size: 1em;
-        color: #33010a;
+        color: #590016;
         outline: none;
         vertical-align: middle;
         transition: border-bottom 0.3s ease;
@@ -619,6 +635,11 @@
         box-shadow: #eddab3e0 0px 0px 15px;
         transform: scale(1.05);
         transition: background-color 0.3s ease, box-shadow 0.3 ease, transform 0.3s ease;
+    }
+
+    .contact_form p.error {
+    color: #b11c23 !important;
+    font-size: 0.9em;
     }
 
     /*------------------------*/
@@ -716,19 +737,23 @@
         transition: max-height 0.4s ease-in-out, padding 0.3s ease-in-out;
         background-color: #fff9e8;
         border-left: 4px solid #d4b07f;
+        border-right: 4px solid #d4b07f;
     }
 
     .info-drawer p, .info-drawer h3 {
+        color: #333;
         text-align: left;
+        text-shadow: none;
         margin: 0.1rem;
+        padding: 0.2rem;
     }
 
     .toggle-info:checked + .info-drawer {
         max-height: 500px;
         padding: 1rem;
-        margin-top: 1rem;
+        margin-top: 0.5rem;
         padding: 0.1rem;
-        border-radius: 0 8px 8px 0;
+        border-radius: 0 0 10px 10px;
     }
 
     /*------------------------*/
@@ -773,7 +798,7 @@
 
     #tree-1 {
         bottom: 20px;
-        right: 10px;
+        right: -250px;
         width: 500px;
         height: auto;
     }
@@ -809,11 +834,10 @@
     }
 
     #mushroom-1 {
-        bottom: 60px;
-        right: 350px;
+        bottom: -50px;
+        right: 450px;
         width: 100px;
         height: auto;
-        animation-delay: 1s;
     }
 
     #mushroom-2 {
@@ -849,9 +873,6 @@
     }
 
     @media (max-width: 1500px) {
-        #tree-1 {
-            right: -250px;
-        }
         #treeInt-1 {
             right: -150px;
         }
@@ -861,6 +882,7 @@
         #mushroom-1 {
             right: 0;
             left: 70px;
+            bottom: 20px;
         }
         #mushroom-2 {
             right: 5px;
